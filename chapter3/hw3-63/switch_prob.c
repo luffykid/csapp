@@ -10,8 +10,10 @@ long switch_prob (long x, long n)
             result = x >> 3;
             break;
         case 64:
-            result = n << 4;
-            result -= x;
+            /*result = n;
+            result <<= 4;
+            result -= x;*/
+            result =  (n << 4) - x;
             x = result;
         case 65:
             x *= x;
